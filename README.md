@@ -16,10 +16,14 @@ This bash script is designed to flatten your project file structure, making it e
 
 1. Save the script as `flatten_copy.sh` in your desired location.
 
-2. Make the script executable:
+2. Modify the `EXCLUDE_PATHS` list to exclude paths from being copies.
+
+3. Select which file types to include: `-type f \( -name ".ts" -o -name ".tsx" -o -name ".css" -o -name "*.sh" \)`
+
+4. Make the script executable:
 `chmod +x flatten_copy.sh`
 
-3. Run the script with source and destination directories:
+5. Run the script with source and destination directories:
 `./flatten_copy.sh /path/to/source/directory /path/to/destination/directory`
 
 ## Features
