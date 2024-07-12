@@ -2,6 +2,22 @@
 
 This bash script is designed to flatten your project file structure, making it easier to upload files to Claude.ai's new project files feature. It copies files from a source directory to a destination directory, renaming them based on their original path to maintain uniqueness and traceability.
 
+For example, it will take a folder that looks like this:
+```
+/src
+  /app
+    Button.tsx
+    Card.tsx
+```
+
+and return a single folder like this:
+```
+/
+  src_app_Buton.tsx
+  src_app_Card.tsx
+```
+
+
 ## Why This Is Useful
 
 1. **Simplified Upload Process**: Claude.ai's project files feature has limitations on directory structure. This script flattens your project structure, making it easier to upload and work with your files in Claude.ai.
@@ -16,7 +32,7 @@ This bash script is designed to flatten your project file structure, making it e
 
 1. Save the script as `flatten_copy.sh` in your desired location.
 
-2. Modify the `EXCLUDE_PATHS` list to exclude paths from being copies.
+2. Modify the `EXCLUDE_PATHS` list to exclude paths from being copied.
 
 3. Select which file types to include: `-type f \( -name ".ts" -o -name ".tsx" -o -name ".css" -o -name "*.sh" \)`
 
